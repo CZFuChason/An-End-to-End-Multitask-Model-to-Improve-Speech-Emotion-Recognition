@@ -60,7 +60,7 @@ def SER_model(tra_data, tra_label_emo, tra_label_spea, val_data, val_label_emo, 
 
             
         emo_opt = Dense(classes, activation='softmax',kernel_initializer='uniform',bias_initializer='zeros', name='emo_label')(z)
-        spea_opt = Dense(14, activation='softmax',kernel_initializer='uniform',bias_initializer='zeros', name='speaker_label')(z)
+        spea_opt = Dense(13, activation='softmax',kernel_initializer='uniform',bias_initializer='zeros', name='speaker_label')(z)
         
         model = Model(inputs=[ipt_attention, ipt_features],outputs=[emo_opt,spea_opt])
     
